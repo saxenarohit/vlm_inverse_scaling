@@ -1,0 +1,27 @@
+dataset,subtask,small_model,large_model,n,acc_small,acc_large,delta_pp,flip_inv,flip_norm,net,both_right,both_wrong
+mmt_bench,visual_recognition,12b,27b,658,84.0,81.8,2.3,37,22,15,516,83
+mmt_bench,autonomous_driving,12b,27b,100,64.0,56.0,8.0,14,6,8,50,30
+mmt_bench,medical_understanding,4b,27b,100,73.0,66.0,7.0,20,13,7,53,14
+mmt_bench,action_recognition,4b,12b,100,51.0,45.0,6.0,12,6,6,39,43
+mmt_bench,relation_reasoning,4b,12b,80,62.5,56.2,6.2,13,8,5,37,22
+mmt_bench,threed,12b,27b,40,52.5,40.0,12.5,8,3,5,13,16
+mmmu_test,Investment,4b,12b,119,41.2,30.3,10.9,31,18,13,18,52
+mmmu_test,Fluid Mechanics,12b,27b,225,42.7,38.2,4.4,49,39,10,47,90
+mmmu_test,Corporate Finance,12b,27b,131,46.6,39.7,6.9,25,16,9,36,54
+mmmu_test,Pathology,12b,27b,33,51.5,30.3,21.2,7,0,7,10,16
+mmmu_test,Physiology,4b,12b,73,46.6,38.4,8.2,16,10,6,18,29
+mmmu_test,Management Models,12b,27b,72,66.7,58.3,8.3,12,6,6,36,18
+mmmu_test,Mechanics of Materials,4b,12b,364,34.1,32.7,1.4,73,68,5,51,172
+mmmu_test,Organic Chemistry,12b,27b,322,35.1,33.5,1.6,43,38,5,70,171
+scienceqa,Basic economic principles,4b,27b,71,80.3,40.8,39.4,31,3,28,26,11
+scienceqa,Particle motion and energy,12b,27b,41,95.1,51.2,43.9,18,0,18,21,2
+scienceqa,Basic economic principles,12b,27b,71,64.8,40.8,23.9,21,4,17,25,21
+scienceqa,Particle motion and energy,4b,27b,41,85.4,51.2,34.1,19,5,14,16,1
+scienceqa,Magnets,12b,27b,110,46.4,34.5,11.8,31,18,13,20,41
+scienceqa,Basic economic principles,4b,12b,71,80.3,64.8,15.5,14,3,11,43,11
+scienceqa,Magnets,4b,27b,110,44.5,34.5,10.0,36,25,11,13,36
+scienceqa,Physical Geography,4b,12b,51,82.4,70.6,11.8,6,0,6,36,9
+scienceqa,Solutions,12b,27b,54,63.0,51.9,11.1,7,1,6,27,19
+scienceqa,Oceania: geography,4b,12b,51,47.1,37.3,9.8,14,9,5,10,18
+blink,Multi-view Reasoning,4b,27b,133,55.6,50.4,5.3,9,2,7,65,57
+blink,Multi-view Reasoning,12b,27b,133,55.6,50.4,5.3,14,7,7,60,52

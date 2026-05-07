@@ -1,0 +1,136 @@
+dataset,subtask,small_model,large_model,n,acc_small,acc_large,delta_pp,flip_inv,flip_norm,net,both_right,both_wrong
+mmt_bench,autonomous_driving,30B-A3B,235B-A22B,100,65.0,42.0,23.0,23,0,23,42,35
+mmt_bench,autonomous_driving,2B,235B-A22B,100,61.0,42.0,19.0,23,4,19,38,35
+mmt_bench,autonomous_driving,8B,235B-A22B,100,59.0,42.0,17.0,18,1,17,41,40
+mmt_bench,autonomous_driving,32B,235B-A22B,100,58.0,42.0,16.0,17,1,16,41,41
+mmt_bench,autonomous_driving,4B,235B-A22B,100,56.0,42.0,14.0,16,2,14,40,42
+mmt_bench,cross_image_matching,8B,30B-A3B,60,71.7,48.3,23.3,21,7,14,22,10
+mmt_bench,medical_understanding,4B,8B,100,92.0,79.0,13.0,14,1,13,78,7
+mmt_bench,medical_understanding,4B,32B,100,92.0,79.0,13.0,16,3,13,76,5
+mmt_bench,medical_understanding,4B,235B-A22B,100,92.0,79.0,13.0,17,4,13,75,4
+mmt_bench,medical_understanding,4B,30B-A3B,100,92.0,80.0,12.0,16,4,12,76,4
+mmt_bench,visual_illusion,30B-A3B,235B-A22B,79,53.2,38.0,15.2,17,5,12,25,32
+mmt_bench,anomaly_detection,4B,30B-A3B,100,66.0,55.0,11.0,21,10,11,45,24
+mmt_bench,anomaly_detection,8B,30B-A3B,100,65.0,55.0,10.0,18,8,10,47,27
+mmt_bench,temporal_understanding,8B,30B-A3B,99,56.6,46.5,10.1,23,13,10,33,30
+mmt_bench,temporal_understanding,4B,30B-A3B,99,55.6,46.5,9.1,21,12,9,34,32
+mmt_bench,cross_image_matching,4B,30B-A3B,60,61.7,48.3,13.3,14,6,8,23,17
+mmt_bench,visual_illusion,32B,235B-A22B,79,48.1,38.0,10.1,11,3,8,27,38
+mmt_bench,autonomous_driving,30B-A3B,32B,100,65.0,58.0,7.0,8,1,7,57,34
+mmt_bench,visual_illusion,2B,235B-A22B,79,45.6,38.0,7.6,22,16,6,14,27
+mmt_bench,action_recognition,4B,8B,100,58.0,52.0,6.0,10,4,6,48,38
+mmt_bench,temporal_understanding,8B,32B,99,56.6,50.5,6.1,14,8,6,42,35
+mmt_bench,autonomous_driving,2B,4B,100,61.0,56.0,5.0,13,8,5,48,31
+mmt_bench,multiple_image_analysis,2B,8B,40,52.5,40.0,12.5,9,4,5,12,15
+mmt_bench,visual_illusion,2B,8B,79,45.6,39.2,6.3,23,18,5,13,25
+mmt_bench,emotion,4B,8B,120,56.7,52.5,4.2,10,5,5,58,47
+mmt_bench,relation_reasoning,4B,8B,80,73.8,67.5,6.2,10,5,5,49,16
+mmt_bench,action_recognition,4B,30B-A3B,100,58.0,53.0,5.0,10,5,5,48,37
+mmt_bench,temporal_understanding,4B,32B,99,55.6,50.5,5.1,16,11,5,39,33
+mmt_bench,action_recognition,4B,235B-A22B,100,58.0,53.0,5.0,14,9,5,44,33
+mmt_bench,pixel_level_perception,8B,30B-A3B,114,50.0,45.6,4.4,20,15,5,37,42
+mmt_bench,gui_navigation,30B-A3B,32B,80,72.5,66.2,6.2,14,9,5,44,13
+mmmu_test,Surveying and Mapping,8B,30B-A3B,412,31.6,27.4,4.1,63,46,17,67,236
+mmmu_test,Electrical Circuit,30B-A3B,32B,128,41.4,28.1,13.3,24,7,17,29,68
+mmmu_test,Cost Management,30B-A3B,32B,58,43.1,19.0,24.1,17,3,14,8,30
+mmmu_test,Data Structure and Algorithm,4B,30B-A3B,92,45.7,33.7,12.0,18,7,11,24,43
+mmmu_test,Cost Management,30B-A3B,235B-A22B,58,43.1,24.1,19.0,15,4,11,10,29
+mmmu_test,Data Structure and Algorithm,8B,30B-A3B,92,43.5,33.7,9.8,17,8,9,23,44
+mmmu_test,Engineering Graphics,8B,30B-A3B,89,37.1,27.0,10.1,19,10,9,14,46
+mmmu_test,Physiology,2B,8B,73,38.4,27.4,11.0,16,8,8,12,37
+mmmu_test,Calculus,4B,8B,161,44.7,39.8,5.0,23,15,8,49,74
+mmmu_test,Financial Accounting,30B-A3B,32B,107,51.4,43.9,7.5,20,12,8,35,40
+mmmu_test,Physiology,2B,4B,73,38.4,28.8,9.6,14,7,7,14,38
+mmmu_test,Control System,4B,30B-A3B,45,75.6,60.0,15.6,10,3,7,24,8
+mmmu_test,Control System,8B,30B-A3B,45,75.6,60.0,15.6,10,3,7,24,8
+mmmu_test,AI Content Detection,2B,4B,20,65.0,35.0,30.0,9,3,6,4,4
+mmmu_test,Cost Management,2B,8B,58,19.0,8.6,10.3,8,2,6,3,45
+mmmu_test,Artificial Intelligence,4B,8B,43,74.4,60.5,14.0,11,5,6,21,6
+mmmu_test,Microbiology,4B,8B,60,56.7,46.7,10.0,11,5,6,23,21
+mmmu_test,Operation Research,4B,8B,49,61.2,49.0,12.2,10,4,6,20,15
+mmmu_test,Principles of Management,4B,8B,41,51.2,36.6,14.6,9,3,6,12,17
+mmmu_test,Financial Management,30B-A3B,32B,36,44.4,27.8,16.7,9,3,6,7,17
+mmmu_test,Operating System,30B-A3B,32B,54,55.6,44.4,11.1,12,6,6,18,18
+mmmu_test,Structural Engineering,30B-A3B,32B,94,39.4,33.0,6.4,13,7,6,24,50
+mmmu_test,Graph Theory,2B,4B,78,44.9,38.5,6.4,15,10,5,20,33
+mmmu_test,Investment,4B,8B,119,47.9,43.7,4.2,19,14,5,38,48
+mmmu_test,Surveying and Mapping,4B,30B-A3B,412,28.6,27.4,1.2,54,49,5,64,245
+mmmu_test,Thermodynamics,8B,30B-A3B,163,58.3,55.2,3.1,22,17,5,73,51
+mmmu_test,Engineering Graphics,8B,32B,89,37.1,31.5,5.6,20,15,5,13,41
+mmmu_test,Surveying and Mapping,8B,32B,412,31.6,30.3,1.2,46,41,5,84,241
+mmmu_test,Civil Engineering,8B,235B-A22B,41,73.2,61.0,12.2,11,6,5,19,5
+mmmu_test,Calculus,30B-A3B,32B,161,52.2,49.1,3.1,17,12,5,67,65
+mmmu_test,Design History,30B-A3B,32B,84,90.5,84.5,6.0,7,2,5,69,6
+mmmu_test,Graph Theory,30B-A3B,32B,78,51.3,44.9,6.4,13,8,5,27,30
+mmmu_test,Human Geography,30B-A3B,32B,47,68.1,57.4,10.6,7,2,5,25,13
+mmmu_test,Electrical Circuit,30B-A3B,235B-A22B,128,41.4,37.5,3.9,15,10,5,38,65
+scienceqa,"Velocity, acceleration, and forces",30B-A3B,32B,62,90.3,75.8,14.5,12,3,9,44,3
+scienceqa,The Americas: geography,2B,4B,45,86.7,68.9,17.8,14,6,8,25,0
+scienceqa,"Velocity, acceleration, and forces",8B,32B,62,88.7,75.8,12.9,11,3,8,44,4
+scienceqa,"Velocity, acceleration, and forces",4B,32B,62,85.5,75.8,9.7,8,2,6,45,7
+scienceqa,The Americas: geography,30B-A3B,32B,45,93.3,80.0,13.3,7,1,6,35,2
+scienceqa,Ecosystems,4B,8B,73,91.8,84.9,6.8,6,1,5,61,5
+scienceqa,Astronomy,30B-A3B,32B,36,88.9,75.0,13.9,6,1,5,26,3
+mme,scene,2B,235B-A22B,400,86.2,83.5,2.8,20,9,11,325,46
+mme,scene,32B,235B-A22B,400,86.2,83.5,2.8,18,7,11,327,48
+mme,scene,30B-A3B,235B-A22B,400,86.0,83.5,2.5,14,4,10,330,52
+mme,scene,4B,235B-A22B,400,85.0,83.5,1.5,14,8,6,326,52
+mme,celebrity,8B,32B,340,92.4,90.6,1.8,20,14,6,294,12
+mme,scene,8B,235B-A22B,400,85.0,83.5,1.5,13,7,6,327,53
+mme,position,30B-A3B,235B-A22B,60,93.3,83.3,10.0,7,1,6,49,3
+mme,scene,2B,4B,400,86.2,85.0,1.2,14,9,5,331,46
+mme,scene,2B,8B,400,86.2,85.0,1.2,18,13,5,327,42
+mme,posters,32B,235B-A22B,294,95.2,93.5,1.7,9,4,5,271,10
+mathvista,math word problem,8B,30B-A3B,186,81.7,78.0,3.8,15,8,7,137,26
+blink,Jigsaw,4B,30B-A3B,150,84.0,60.0,24.0,45,9,36,81,15
+blink,Jigsaw,4B,32B,150,84.0,62.0,22.0,44,11,33,82,13
+blink,Multi-view Reasoning,8B,32B,133,51.1,28.6,22.6,38,8,30,30,57
+blink,Multi-view Reasoning,2B,32B,133,50.4,28.6,21.8,37,8,29,30,58
+blink,Object Localization,4B,30B-A3B,122,65.6,47.5,18.0,35,13,22,45,29
+blink,Multi-view Reasoning,4B,32B,133,45.1,28.6,16.5,37,15,22,23,58
+blink,Forensic Detection,4B,32B,132,81.8,66.7,15.2,25,5,20,83,19
+blink,Forensic Detection,4B,235B-A22B,132,81.8,66.7,15.2,27,7,20,81,17
+blink,Jigsaw,4B,235B-A22B,150,84.0,70.7,13.3,30,10,20,96,14
+blink,Multi-view Reasoning,30B-A3B,32B,133,43.6,28.6,15.0,39,19,20,19,56
+blink,Jigsaw,4B,8B,150,84.0,71.3,12.7,27,8,19,99,16
+blink,IQ Test,8B,30B-A3B,150,17.3,6.0,11.3,25,8,17,1,116
+blink,Jigsaw,8B,30B-A3B,150,71.3,60.0,11.3,34,17,17,73,26
+blink,Relative Reflectance,32B,235B-A22B,134,71.6,59.0,12.7,23,6,17,73,32
+blink,Forensic Detection,4B,30B-A3B,132,81.8,69.7,12.1,23,7,16,85,17
+blink,Forensic Detection,8B,32B,132,77.3,66.7,10.6,25,11,14,77,19
+blink,Jigsaw,8B,32B,150,71.3,62.0,9.3,34,20,14,73,23
+blink,Forensic Detection,8B,235B-A22B,132,77.3,66.7,10.6,26,12,14,76,18
+blink,Multi-view Reasoning,8B,235B-A22B,133,51.1,40.6,10.5,32,18,14,36,47
+blink,Multi-view Reasoning,2B,235B-A22B,133,50.4,40.6,9.8,35,22,13,32,44
+blink,Object Localization,4B,8B,122,65.6,56.6,9.0,28,17,11,52,25
+blink,Object Localization,8B,30B-A3B,122,56.6,47.5,9.0,28,17,11,41,36
+blink,Object Localization,4B,32B,122,65.6,57.4,8.2,30,20,10,50,22
+blink,Forensic Detection,8B,30B-A3B,132,77.3,69.7,7.6,24,14,10,78,16
+blink,Multi-view Reasoning,8B,30B-A3B,133,51.1,43.6,7.5,22,12,10,46,53
+blink,IQ Test,8B,32B,150,17.3,10.7,6.7,20,10,10,6,114
+blink,Multi-view Reasoning,2B,30B-A3B,133,50.4,43.6,6.8,23,14,9,44,52
+blink,Relative Reflectance,4B,30B-A3B,134,60.4,54.5,6.0,24,16,8,57,37
+blink,Functional Correspondence,32B,235B-A22B,130,67.7,61.5,6.2,25,17,8,63,25
+blink,Multi-view Reasoning,2B,4B,133,50.4,45.1,5.3,19,12,7,48,54
+blink,Jigsaw,2B,30B-A3B,150,64.7,60.0,4.7,39,32,7,58,21
+blink,Relative Depth,8B,30B-A3B,124,83.9,78.2,5.6,10,3,7,94,17
+blink,Forensic Detection,4B,8B,132,81.8,77.3,4.5,16,10,6,92,14
+blink,Relative Depth,4B,30B-A3B,124,83.1,78.2,4.8,13,7,6,90,14
+blink,Multi-view Reasoning,4B,235B-A22B,133,45.1,40.6,4.5,30,24,6,30,49
+blink,Object Localization,4B,235B-A22B,122,65.6,60.7,4.9,22,16,6,58,26
+blink,Relative Reflectance,8B,30B-A3B,134,59.0,54.5,4.5,29,23,6,50,32
+mmbench,coarse_perception,8B,235B-A22B,1109,49.4,47.3,2.1,105,82,23,443,479
+mmbench,relation_reasoning,2B,30B-A3B,445,54.8,51.0,3.8,96,79,17,148,122
+mmbench,coarse_perception,8B,32B,1109,49.4,47.9,1.5,113,96,17,435,465
+mmbench,relation_reasoning,8B,30B-A3B,445,54.2,51.0,3.1,74,60,14,167,144
+mmbench,relation_reasoning,2B,4B,445,54.8,51.9,2.9,45,32,13,199,169
+mmbench,relation_reasoning,2B,235B-A22B,445,54.8,51.9,2.9,70,57,13,174,144
+mmbench,coarse_perception,30B-A3B,235B-A22B,1109,48.4,47.3,1.1,103,91,12,434,481
+mmbench,coarse_perception,8B,30B-A3B,1109,49.4,48.4,1.0,120,109,11,428,452
+mmbench,finegrained_perception (instance-level),8B,30B-A3B,1131,50.8,49.9,1.0,138,127,11,437,429
+mmbench,relation_reasoning,8B,235B-A22B,445,54.2,51.9,2.2,56,46,10,185,158
+mmbench,relation_reasoning,2B,32B,445,54.8,52.8,2.0,60,51,9,184,150
+mmbench,attribute_reasoning,4B,8B,699,62.8,61.8,1.0,54,47,7,385,213
+mmbench,relation_reasoning,8B,32B,445,54.2,52.8,1.3,59,53,6,182,151
+mmbench,coarse_perception,30B-A3B,32B,1109,48.4,47.9,0.5,123,117,6,414,455
+mmbench,coarse_perception,32B,235B-A22B,1109,47.9,47.3,0.5,121,115,6,410,463
