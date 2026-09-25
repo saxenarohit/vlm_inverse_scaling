@@ -40,7 +40,9 @@ class MMTBenchDataset:
         data_dir = data_dir or os.path.join(DATA_DIR, "mmt_bench")
         tsv_path = os.path.join(data_dir, f"MMT-Bench_{split}.tsv")
         print(f"Loading MMT-Bench {split} from {tsv_path}...")
-        self.df = pd.read_csv(tsv_path, sep="\t")
+        # dtype=str on the image column, same defensive fix as MMBench: pandas'
+        # chunked type inference must never coerce image fields.
+        self.df = pd.read_csv(tsv_path, sep="\t", dtype={"image": str}, low_memory=False)
         print(f"Loaded {len(self.df)} samples, {self.df['l2-category'].nunique()} subtasks")
 
     def __len__(self):
@@ -311,7 +313,12 @@ class MMBenchDataset:
         data_dir = data_dir or os.path.join(DATA_DIR, "mmbench")
         tsv_path = os.path.join(data_dir, f"MMBench_{split}.tsv")
         print(f"Loading MMBench {split} from {tsv_path}...")
-        self.df = pd.read_csv(tsv_path, sep="\t")
+        # dtype=str on the image column: it mixes base64 blobs with numeric
+        # row references, and pandas' chunked type inference (low_memory)
+        # can silently turn a run of references into floats ("123" -> 123.0),
+        # breaking the reference lookup below and dropping the image.
+        self.df = pd.read_csv(tsv_path, sep="\t", dtype={"image": str},
+                              low_memory=False)
         # Build index->base64 map: some rows have base64 blobs, others have
         # numeric IDs that reference those rows
         self._img_b64 = {}
@@ -331,11 +338,19 @@ class MMBenchDataset:
             if letter in row and pd.notna(row[letter]) and str(row[letter]).strip():
                 options.append(str(row[letter]))
         # Resolve image: either base64 blob or numeric ID referencing another row
-        img_val = str(row.get("image", ""))
-        if img_val.isdigit() and img_val in self._img_b64:
-            image = decode_base64_image(self._img_b64[img_val])
+        img_val = str(row.get("image", "")).strip()
+        if len(img_val) <= 100:  # numeric reference, possibly float-formatted
+            try:
+                ref = str(int(float(img_val)))
+            except ValueError:
+                ref = img_val
+            image = decode_base64_image(self._img_b64.get(ref, ""))
         else:
             image = decode_base64_image(img_val)
+        if image is None:
+            raise RuntimeError(
+                f"MMBench index={row.get('index', idx)}: image failed to "
+                f"resolve (field={img_val[:40]!r}); refusing to run image-blind")
         hint = str(row.get("hint", "")) if pd.notna(row.get("hint", "")) else ""
         return {
             "index": int(row["index"]) if "index" in row else idx,

@@ -17,6 +17,5 @@ blink,Relative Reflectance,4B,8B,134,48.5,41.8,6.7,21,12,9,44,57
 blink,Semantic Correspondence,4B,8B,139,51.1,44.6,6.5,24,15,9,47,53
 blink,Forensic Detection,4B,8B,132,73.5,67.4,6.1,27,19,8,70,16
 blink,Object Localization,4B,8B,122,59.8,55.7,4.1,22,17,5,51,32
-mmbench,relation_reasoning,4B,8B,445,56.4,46.7,9.7,80,37,43,171,157
-mmbench,finegrained_perception (instance-level),4B,8B,1131,48.9,48.2,0.7,107,99,8,446,479
-mmbench,coarse_perception,4B,8B,1109,48.0,47.4,0.5,88,82,6,444,495
+mmbench,coarse_perception,4B,8B,1109,89.7,88.1,1.6,33,15,18,962,99
+mmbench,logic_reasoning,4B,8B,412,82.0,80.8,1.2,28,23,5,310,51

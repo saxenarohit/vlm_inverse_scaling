@@ -15,6 +15,8 @@ Download benchmark datasets:
 python setup_data.py
 ```
 
+By default, `setup_data.py`, the inference scripts and the analysis scripts use the `data/`, `output/` and `analysis/` directories located one level above this repository (the parent of the checkout). Pass `--output_dir` / `--csv_dir` to override.
+
 ## Running Inference
 
 Each model family has its own inference script. All use zero-shot direct prompting with greedy decoding.
@@ -33,7 +35,7 @@ python infer_gemma3.py --model google/gemma-3-12b-it --dataset mmt_bench --mode 
 python infer_molmo2.py --model allenai/Molmo2-8B --dataset mmbench --mode direct
 ```
 
-Results are saved to `output/{model_name}/{dataset}/{split}_direct.jsonl`.
+Results are saved to `output/{model_name}/{dataset}/{split}_direct.jsonl` (see the note on default directories above).
 
 Available datasets: `mmt_bench`, `mmmu`, `scienceqa`, `mme`, `ai2d`, `mathvista`, `blink`, `mmbench`.
 
@@ -47,7 +49,7 @@ Find inverse scaling cases using pairwise flip analysis:
 python analyze_flips.py --family all --dataset all
 ```
 
-This outputs CSVs to `analysis/` with all subtask-model pairs where a smaller model outperforms a larger one (Net >= 5, n >= 20).
+This outputs CSVs to `analysis/` (default location as above) with all subtask-model pairs where a smaller model outperforms a larger one (Net >= 5, n >= 20).
 
 To view per-subtask accuracy breakdowns:
 ```bash
@@ -60,12 +62,12 @@ Responses are scored using deterministic pattern matching (letter extraction for
 
 ## Pre-computed Results
 
-The `results/` directory contains the 405 pairwise inverse scaling cases reported in the paper:
+The `results/` directory contains the 375 pairwise inverse scaling cases reported in the paper:
 
-- `results/inverse_scaling_qwen.csv` — Qwen3-VL (135 cases)
-- `results/inverse_scaling_internvl.csv` — InternVL3.5 (223 cases)
+- `results/inverse_scaling_qwen.csv` — Qwen3-VL (122 cases)
+- `results/inverse_scaling_internvl.csv` — InternVL3.5 (207 cases)
 - `results/inverse_scaling_gemma3.csv` — Gemma 3 (26 cases)
-- `results/inverse_scaling_molmo2.csv` — Molmo 2 (21 cases)
+- `results/inverse_scaling_molmo2.csv` — Molmo 2 (20 cases)
 
 Each CSV contains: dataset, subtask, small\_model, large\_model, n, acc\_small, acc\_large, delta\_pp, flip\_inv, flip\_norm, net, both\_right, both\_wrong.
 
@@ -80,4 +82,5 @@ Each CSV contains: dataset, subtask, small\_model, large\_model, n, acc\_small, 
 - `dataset_loaders.py` — benchmark dataset loaders
 - `prompts.yaml` — prompt templates
 - `setup_data.py` — dataset download script
-- `results/` — pre-computed inverse scaling cases (405 total)
+- `scienceqa_image_lines.json` — indices of the 2,017 ScienceQA test questions with images (used when `data/scienceqa` is absent)
+- `results/` — pre-computed inverse scaling cases (375 total)

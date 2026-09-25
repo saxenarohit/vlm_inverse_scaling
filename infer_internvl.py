@@ -42,6 +42,9 @@ INTERNVL_MODELS = [
 
 MULTI_GPU_MODELS = [
     "OpenGVLab/InternVL3_5-241B-A28B-Instruct",
+    # 38B weights (76GB bf16) + vision-tile activations exceed one 80GB card
+    # once MMBench images load correctly; shard across the allocated GPUs.
+    "OpenGVLab/InternVL3_5-38B-Instruct",
 ]
 
 

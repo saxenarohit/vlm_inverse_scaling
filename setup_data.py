@@ -50,7 +50,14 @@ def setup_mmmu():
             print(f"  MMMU {split}: already exists at {split_dir}, skipping")
             continue
         print(f"  Downloading MMMU {split}...")
-        ds = load_dataset("MMMU/MMMU", split=split)
+        # MMMU/MMMU has one config per subject (no config-less load in current
+        # `datasets`). Concatenate the 30 subjects in config order (alphabetical,
+        # as get_dataset_config_names returns them); this reproduces the row
+        # order of the paper's original preparation (subject blocks, ids ascending).
+        from datasets import concatenate_datasets, get_dataset_config_names
+        configs = get_dataset_config_names("MMMU/MMMU")
+        parts = [load_dataset("MMMU/MMMU", cfg, split=split) for cfg in configs]
+        ds = concatenate_datasets(parts)
         ds.save_to_disk(split_dir)
         print(f"  Saved {len(ds)} samples to {split_dir}")
 

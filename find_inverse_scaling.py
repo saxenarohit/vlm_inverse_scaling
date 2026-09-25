@@ -28,6 +28,13 @@ def _get_scienceqa_image_set():
     from datasets import load_from_disk
     ds_path = os.path.join(DATA_DIR, "scienceqa", "test")
     if not os.path.exists(ds_path):
+        # Without the raw data, use the shipped index of the 2,017 image questions
+        # (line indices of the test split), so the text-only screen still applies.
+        idx_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "scienceqa_image_lines.json")
+        if os.path.exists(idx_path):
+            _scienceqa_has_image = set(json.load(open(idx_path)))
+            return _scienceqa_has_image
         _scienceqa_has_image = None
         return None
     ds = load_from_disk(ds_path)
@@ -259,9 +266,6 @@ def find_inverse_scaling(family_config, dataset, output_dir, min_n=5, min_delta=
         model_accs[m] = accs
         model_ns[m] = ns
 
-    if largest not in model_accs:
-        return [], model_accs
-
     # Compute overall accuracy
     overall = {}
     for m in models:
@@ -280,6 +284,14 @@ def find_inverse_scaling(family_config, dataset, output_dir, min_n=5, min_delta=
                     if _match_response(resp, ans, dataset, record=r):
                         correct += 1
             overall[m] = (correct, total, correct / total * 100 if total else 0)
+
+    # The search is defined relative to the family's largest model; without it,
+    # report overall accuracies only (partial family, e.g. a size still running).
+    if largest not in model_accs:
+        if model_accs:
+            print(f"  [warn] {dataset}: no results for the largest model ({largest}); "
+                  f"inverse-scaling search skipped")
+        return [], overall
 
     # Find all categories
     all_cats = set()

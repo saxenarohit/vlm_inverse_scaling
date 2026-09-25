@@ -196,29 +196,13 @@ blink,IQ Test,1B,2B,150,24.7,21.3,3.3,31,26,5,6,87
 blink,Visual Similarity,4B,14B,135,56.3,52.6,3.7,24,19,5,52,40
 blink,Jigsaw,14B,30B-A3B,150,48.0,44.7,3.3,44,39,5,28,39
 blink,Object Localization,38B,241B-A28B,122,58.2,54.1,4.1,18,13,5,53,38
-mmbench,finegrained_perception (cross-instance),14B,30B-A3B,533,67.5,59.3,8.3,96,52,44,264,121
-mmbench,relation_reasoning,30B-A3B,38B,445,55.3,47.4,7.9,65,30,35,181,169
-mmbench,finegrained_perception (instance-level),38B,241B-A28B,1131,51.3,48.8,2.5,124,96,28,456,455
-mmbench,relation_reasoning,14B,38B,445,53.5,47.4,6.1,55,28,27,183,179
-mmbench,coarse_perception,8B,30B-A3B,1109,49.4,47.1,2.3,130,104,26,418,457
-mmbench,coarse_perception,8B,241B-A28B,1109,49.4,47.4,2.0,106,84,22,442,477
-mmbench,coarse_perception,4B,30B-A3B,1109,49.0,47.1,1.9,128,107,21,415,459
-mmbench,relation_reasoning,4B,38B,445,52.1,47.4,4.7,68,47,21,164,166
-mmbench,coarse_perception,14B,30B-A3B,1109,48.9,47.1,1.8,114,94,20,428,473
-mmbench,relation_reasoning,8B,38B,445,51.7,47.4,4.3,54,35,19,176,180
-mmbench,finegrained_perception (instance-level),14B,30B-A3B,1131,50.1,48.5,1.7,136,117,19,431,447
-mmbench,attribute_reasoning,30B-A3B,241B-A28B,699,64.7,62.1,2.6,65,47,18,387,200
-mmbench,coarse_perception,38B,241B-A28B,1109,49.1,47.4,1.6,127,109,18,417,456
-mmbench,coarse_perception,4B,241B-A28B,1109,49.0,47.4,1.5,131,114,17,412,452
-mmbench,attribute_reasoning,8B,14B,699,64.2,61.8,2.4,62,45,17,387,205
-mmbench,coarse_perception,14B,241B-A28B,1109,48.9,47.4,1.4,93,77,16,449,490
-mmbench,attribute_reasoning,8B,241B-A28B,699,64.2,62.1,2.1,68,53,15,381,197
-mmbench,finegrained_perception (instance-level),14B,241B-A28B,1131,50.1,48.8,1.3,131,116,15,436,448
-mmbench,finegrained_perception (cross-instance),1B,2B,533,41.7,39.0,2.6,70,56,14,152,255
-mmbench,relation_reasoning,1B,2B,445,47.0,44.5,2.5,50,39,11,159,197
-mmbench,finegrained_perception (instance-level),4B,8B,1131,48.6,47.7,1.0,111,100,11,439,481
-mmbench,attribute_reasoning,30B-A3B,38B,699,64.7,63.4,1.3,54,45,9,398,202
-mmbench,attribute_reasoning,38B,241B-A28B,699,63.4,62.1,1.3,54,45,9,389,211
-mmbench,logic_reasoning,14B,38B,412,65.0,63.3,1.7,25,18,7,243,126
-mmbench,coarse_perception,8B,14B,1109,49.4,48.9,0.5,80,74,6,468,487
-mmbench,attribute_reasoning,8B,38B,699,64.2,63.4,0.9,58,52,6,391,198
+mmbench,coarse_perception,2B,8B,1109,91.2,89.3,1.9,49,28,21,962,70
+mmbench,attribute_reasoning,8B,14B,699,90.1,87.6,2.6,35,17,18,595,52
+mmbench,coarse_perception,2B,4B,1109,91.2,89.6,1.5,42,25,17,969,73
+mmbench,attribute_reasoning,4B,14B,699,89.8,87.6,2.3,29,13,16,599,58
+mmbench,attribute_reasoning,2B,14B,699,89.7,87.6,2.1,29,14,15,598,58
+mmbench,coarse_perception,30B-A3B,241B-A28B,1109,91.5,90.4,1.1,27,15,12,988,79
+mmbench,finegrained_perception (cross-instance),14B,30B-A3B,533,88.7,87.1,1.7,36,27,9,437,33
+mmbench,coarse_perception,2B,241B-A28B,1109,91.2,90.4,0.7,39,31,8,972,67
+mmbench,coarse_perception,38B,241B-A28B,1109,91.2,90.4,0.7,32,24,8,979,74
+mmbench,coarse_perception,14B,241B-A28B,1109,91.0,90.4,0.5,34,28,6,975,72
