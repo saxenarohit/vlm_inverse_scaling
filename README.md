@@ -82,5 +82,4 @@ Each CSV contains: dataset, subtask, small\_model, large\_model, n, acc\_small, 
 - `dataset_loaders.py` — benchmark dataset loaders
 - `prompts.yaml` — prompt templates
 - `setup_data.py` — dataset download script
-- `scienceqa_image_lines.json` — indices of the 2,017 ScienceQA test questions with images (used when `data/scienceqa` is absent)
 - `results/` — pre-computed inverse scaling cases (375 total)

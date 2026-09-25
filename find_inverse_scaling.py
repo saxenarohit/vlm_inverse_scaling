@@ -28,13 +28,6 @@ def _get_scienceqa_image_set():
     from datasets import load_from_disk
     ds_path = os.path.join(DATA_DIR, "scienceqa", "test")
     if not os.path.exists(ds_path):
-        # Without the raw data, use the shipped index of the 2,017 image questions
-        # (line indices of the test split), so the text-only screen still applies.
-        idx_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                "scienceqa_image_lines.json")
-        if os.path.exists(idx_path):
-            _scienceqa_has_image = set(json.load(open(idx_path)))
-            return _scienceqa_has_image
         _scienceqa_has_image = None
         return None
     ds = load_from_disk(ds_path)
